@@ -44,13 +44,9 @@ class AccountWhIvaLine(models.Model):
         'account.invoice', string='Factura', required=True,
         ondelete='restrict', help="Factura a retener")
     ret_tax = fields.Many2one('account.tax', string='Impuesto a retener', required=True,
-<<<<<<< HEAD
         help="Impuesto a retener." )
     base_tax = fields.Float(string='Base Imponible', digits=dp.get_precision('Withhold'),
         help='Base imponible del impuesto')
-=======
-                              help="Impuesto a retener.")
->>>>>>> pedro
     amount_tax = fields.Float(string='IVA Facturado', digits=dp.get_precision('Withhold'),
                               help="Monto a retener", readonly=True)
     rate_amount = fields.Float(string='%', digits=dp.get_precision('Withhold'),
